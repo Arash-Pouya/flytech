@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Fly from "./Fly";
+import "./Flys.css";
 import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
 const Flys = (props) => {
   useEffect(() => {
@@ -7,11 +8,11 @@ const Flys = (props) => {
   }, [props.flylist]);
   let flys = props.flylist.map((fly, index) => (
     <ErrorBoundary key={index}>
-      <Fly id={fly.id} country={fly.country} state={fly.title} city={fly.city} airline={fly.is_active} />
+      <Fly id={fly.id} country={fly.country} state={fly.state} city={fly.city} airport={fly.airport} />
     </ErrorBoundary>
   ));
   if (props.toggle) {
-    return <div>{flys}</div>;
+    return <div className="flys">{flys}</div>;
   }
   return flys;
 };
