@@ -8,7 +8,7 @@ const Flys = (props) => {
   }, [props.flylist]);
   let flys = props.flylist.map((fly, index) => (
     <ErrorBoundary key={index}>
-      <Fly id={fly.id} country={fly.country} state={fly.state} city={fly.city} airport={fly.airport} />
+      <Fly id={fly.id} country={fly.country} state={fly.state} city={fly.city} airport={fly.airport} name={fly.name} maker={fly.maker} />
     </ErrorBoundary>
   ));
   if (props.toggle) {

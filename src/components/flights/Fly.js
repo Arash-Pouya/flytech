@@ -16,8 +16,8 @@ const Fly = (props) => {
           <use xlink:href="#alitalia"></use>
         </svg> */}
         <div class="flight">
-          <small>flight</small>
-          <strong>AZ 356</strong>
+          <small>{props.maker}</small>
+          <strong>{props.name}</strong>
         </div>
       </header>
       <section class="cities">
